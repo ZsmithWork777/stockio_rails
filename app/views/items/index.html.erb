@@ -1,0 +1,16 @@
+<h1>Inventory List</h1>
+
+<%= link_to "Add New Item", new_item_path %>
+
+<% @items.each do |item| %>
+  <div id="<%= dom_id(item) %>">
+    <p>
+      <strong><%= item.name %></strong> — Quantity: <%= item.quantity %>
+    </p>
+
+    <%= link_to "Show", item_path(item) %> |
+    <%= link_to "Edit", edit_item_path(item) %> |
+    <%= link_to "Delete", item_path(item),
+          data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this item?" } %>
+  </div>
+<% end %>

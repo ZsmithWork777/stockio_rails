@@ -79,4 +79,4 @@ StockIO v2 uses a backend-first approach, ensuring clean code separation and mod
 ---
 
 ## Summary
-StockIO v2 advances the original StockIO concept with a modern Ruby on Rails backend, designed for clean architecture, rapid development, and long-term scalability. The rebuild focuses on production-ready backend design with future API and AI integrations.
+StockIO v2 advances the original StockIO concept with a modern Ruby on Rails backend, designed for clean architecture, rapid development, and long-term scalability. The rebuild focuses on production-ready backend design with future API and AI integrations

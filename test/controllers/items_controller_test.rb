@@ -1,23 +1,27 @@
 require "test_helper"
 
 class ItemsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get items_index_url
-    assert_response :success
+  setup do
+    @item = Item.create(name: "Sample Item", quantity: 5)
   end
 
-  test "should get show" do
-    get items_show_url
+  test "should get index" do
+    get items_url
     assert_response :success
   end
 
   test "should get new" do
-    get items_new_url
+    get new_item_url
+    assert_response :success
+  end
+
+  test "should show item" do
+    get item_url(@item)
     assert_response :success
   end
 
   test "should get edit" do
-    get items_edit_url
+    get edit_item_url(@item)
     assert_response :success
   end
 end

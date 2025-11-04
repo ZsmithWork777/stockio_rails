@@ -2,7 +2,7 @@
 
 <%= form_with model: @item, local: true do |form| %>
 <p>
-    <%= form.label :name %> <br> 
+    <%= form.label :name %> <br>
     <%= form.text_field :name %>
 </p>
 
@@ -13,4 +13,4 @@
 
 <%= form.submit "Update Item" %>
 <% end %>
-<%= link_to " Back to Inventory" , items_path %> 
+<%= link_to " Back to Inventory" , items_path %>

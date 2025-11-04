@@ -2,14 +2,14 @@
 
 <%= form_with model: @item, local: true do |form| %>
 <p>
-    <%= form.label :name %> <br> 
+    <%= form.label :name %> <br>
     <%= form.text_field :name %>
 </p>
 
-<p> 
+<p>
     <%= form.label :quantity %> <br>
     <%= form.number_field :quantity %>
-</p> 
+</p>
 <%= form.submit "Create Item" %>
 <% end %>
 

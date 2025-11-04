@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all 
+    @items = Item.all
   end
 
   def show
@@ -10,27 +10,27 @@ class ItemsController < ApplicationController
   def new
     @item =Item.new
   end
-  def create 
+  def create
     @item=Item.new(item_params)
-    if @item.save 
+    if @item.save
       redirect_to items_path, notice: "Item added successfullly!"
-    else 
+    else
       render :new, status: :unprocessable_entity
-    end 
+    end
   end
 
   def edit
     @item = Item.find(params[:id])
   end
 
-  def update 
+  def update
     @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to items_path, notice: "Item updated successfully!"
-    else 
-      render :edit, status: :unprocessable_entity 
+    else
+      render :edit, status: :unprocessable_entity
     end
-  end 
+  end
 
 def destroy
   @item = Item.find(params[:id])
@@ -41,11 +41,10 @@ def destroy
     format.turbo_stream
   end
 end
-  
-  private 
-  
+
+  private
+
   def item_params
     params.require(:item).permit(:name, :quantity)
-  end 
+  end
 end
-
